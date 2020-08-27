@@ -1,0 +1,3 @@
+[submodule "submodules/sglib"]
+	path = submodules/sglib
+	url = ../../stefanct/sglib

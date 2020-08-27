@@ -1,0 +1,121 @@
+1598493241: 457: Dmalloc version '5.5.2' from 'http://dmalloc.com/'
+1598493241: 457: flags = 0x4f47d03, logfile 'logfile'
+1598493241: 457: interval = 0, addr = 0, seen # = 0, limit = 0
+1598493241: 457: starting time = 1598493241
+1598493241: 457: process pid = 1209
+1598493241: 457: Dumping Chunk Statistics:
+1598493241: 457: basic-block 32768 bytes, alignment 8 bytes
+1598493241: 457: heap address range: 0x6fffffd40000 to 0x6fffffff8000, 2850816 bytes
+1598493241: 457:     user blocks: 34 blocks, 1078886 bytes (63%)
+1598493241: 457:    admin blocks: 18 blocks, 589824 bytes (34%)
+1598493241: 457:    total blocks: 52 blocks, 1703936 bytes
+1598493241: 457: heap checked 368
+1598493241: 457: alloc calls: malloc 204, calloc 64, realloc 4, free 184
+1598493241: 457: alloc calls: recalloc 0, memalign 0, valloc 0
+1598493241: 457: alloc calls: new 0, delete 0
+1598493241: 457:   current memory in use: 399606 bytes (84 pnts)
+1598493241: 457:  total memory allocated: 722206 bytes (272 pnts)
+1598493241: 457:  max in use at one time: 531967 bytes (247 pnts)
+1598493241: 457: max alloced with 1 call: 65536 bytes
+1598493241: 457: max unused memory space: 101601 bytes (16%)
+1598493241: 457: top 10 allocations:
+1598493241: 457:  total-size  count in-use-size  count  source
+1598493241: 457:         288      2           0      0  C:/omarpta/github/youfree/variable.c:11
+1598493241: 457:         112      1           0      0  C:/omarpta/github/youfree/keywords.c:40
+1598493241: 457:         112      1           0      0  C:/omarpta/github/youfree/keywords.c:45
+1598493241: 457:         112      1           0      0  C:/omarpta/github/youfree/keywords.c:15
+1598493241: 457:         112      1           0      0  C:/omarpta/github/youfree/keywords.c:35
+1598493241: 457:         112      1           0      0  C:/omarpta/github/youfree/keywords.c:50
+1598493241: 457:         112      1           0      0  C:/omarpta/github/youfree/keywords.c:60
+1598493241: 457:         112      1           0      0  C:/omarpta/github/youfree/keywords.c:30
+1598493241: 457:         112      1           0      0  C:/omarpta/github/youfree/keywords.c:55
+1598493241: 457:        1185     11           1      1  Total of 10
+1598493241: 457: Dumping Not-Freed Pointers Changed Since Start:
+1598493241: 457:  not freed: '0x6fffffe00000|s1' (65536 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe20000|s3' (57 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe30000|s1' (32768 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe40000|s1' (65536 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe50000|s1' (65536 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe877a8|s1' (8 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe877c8|s1' (8 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87d60|s3' (27 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87d80|s1' (20 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87da0|s1' (18 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87dc0|s1' (17 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87de0|s1' (26 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87e00|s1' (27 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87e20|s1' (22 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87e40|s1' (20 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87e60|s1' (23 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87e80|s1' (30 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87ea0|s1' (30 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87ec0|s1' (27 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87ee0|s1' (24 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87f00|s1' (18 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87f20|s1' (29 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87f40|s1' (32 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87f60|s1' (23 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87f80|s1' (30 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87fa0|s1' (21 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87fc0|s1' (29 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffe87fe0|s1' (31 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffef7e08|s1' (1 bytes) from 'C:/omarpta/github/youfree/variable.c:17'
+1598493241: 457:  not freed: '0x6fffffef7e18|s1' (1 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffef7e28|s1' (3 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffef7f80|s3' (11 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffef7f90|s1' (16 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffef7fa0|s1' (14 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffef7fb0|s1' (15 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffef7fc0|s1' (14 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffef7fd0|s1' (13 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffef7fe0|s1' (8 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffef7ff0|s1' (8 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6ffffff06c00|s1' (923 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6ffffff07000|s1' (753 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6ffffff07400|s1' (918 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6ffffff07808|s3' (760 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6ffffff07c00|s3' (432 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6ffffff10000|s1' (65536 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6ffffff20000|s1' (32768 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6ffffff30000|s1' (32768 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6ffffff47a88|s1' (64 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6ffffff47c08|s1' (64 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6ffffff47d08|s1' (64 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6ffffff47d80|s1' (88 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6ffffff47e00|s1' (80 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6ffffff47e80|s1' (107 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6ffffff47f00|s1' (73 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6ffffff47f80|s3' (69 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6ffffff50000|s1' (32768 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff78c0|s1' (45 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7900|s1' (34 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7940|s1' (58 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7980|s1' (42 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff79c0|s1' (46 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7a00|s1' (37 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7a40|s1' (42 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7a80|s3' (64 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7ac0|s1' (47 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7b00|s1' (38 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7b40|s1' (42 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7bc0|s1' (41 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7c00|s1' (62 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7c40|s1' (41 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7c80|s1' (36 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7cc0|s1' (37 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7d00|s1' (40 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7d40|s1' (49 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7d80|s1' (36 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7dc0|s1' (49 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7e00|s1' (60 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7e40|s1' (49 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7e80|s1' (45 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7ec0|s1' (44 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7f00|s1' (44 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7f40|s1' (38 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7f80|s1' (64 bytes) from 'unknown'
+1598493241: 457:  not freed: '0x6fffffff7fc0|s1' (64 bytes) from 'unknown'
+1598493241: 457:  total-size  count  source
+1598493241: 457:           1      1  C:/omarpta/github/youfree/variable.c:17
+1598493241: 457:           1      1  Total of 1
+1598493241: 457: ending time = 1598493241, elapsed since start = 0:00:00

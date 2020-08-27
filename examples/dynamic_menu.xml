@@ -1,0 +1,250 @@
+<stringvariable value="" variable="sMenu" />
+<stringvariable value="" variable="sDateTime" />
+<stringvariable value="" variable="sMenuPage" />
+<integervariable value="0" variable="iI" />
+<integervariable value="0" variable="iItemCount" />
+<integervariable value="0" variable="iCurrentItemIndex" />
+<integervariable value="0" variable="iIndexMenu" />
+
+<!-- # Return Vars -->
+<integervariable value="0" variable="iRet" />
+<integervariable value="0" variable="iRetMenu" />
+
+<!-- Press Ctrl+J to colapse all -->
+
+<!-- # Main -->
+
+<callfunction name="fn_main" />
+
+<!-- fn_main -->
+<function name="fn_main">
+  <stringvariable value="1.Nova Venda|2.Cancelamento|3.Relatorios|4.Definicoes|5.Atualizacao|6.Assistente|7.Comunicacao|8.Sobre" variable="sMenu" />
+  <callfunction name="fn_menu" />
+
+  <!-- 1.Nova Venda -->
+  <if variable="$(iRetMenu)" operator="equalto" value="1">
+    <stringvariable value="1.Dinheiro|2.Cartao|3.Boleto|4.Cheque" variable="sMenu" />
+    <callfunction name="fn_menu" />
+
+    <!-- 1.Dinheiro -->
+    <if variable="$(iRetMenu)" operator="equalto" value="1">
+
+      <!-- do something here... -->
+
+      <exit />
+    </if>
+
+    <!-- 2.Cartao -->
+    <if variable="$(iRetMenu)" operator="equalto" value="2">
+
+      <!-- do something here... -->
+
+      <exit />
+    </if>
+
+    <!-- 3.Boleto -->
+    <if variable="$(iRetMenu)" operator="equalto" value="3">
+
+      <!-- do something here... -->
+
+      <exit />
+    </if>
+
+    <!-- 4.Cheque -->
+    <if variable="$(iRetMenu)" operator="equalto" value="4">
+
+      <!-- do something here... -->
+
+      <exit />
+    </if>
+  </if>
+
+  <!-- 3.Cancelamento -->
+  <if variable="$(iRetMenu)" operator="equalto" value="2">
+
+    <!-- do something here... -->
+
+    <exit />
+  </if>
+
+  <!-- 3.Relatorios -->
+  <if variable="$(iRetMenu)" operator="equalto" value="3">
+
+    <!-- do something here... -->
+
+    <exit />
+  </if>
+
+  <!-- 4.Definicoes -->
+  <if variable="$(iRetMenu)" operator="equalto" value="4">
+
+    <!-- do something here... -->
+
+    <exit />
+  </if>
+
+  <!-- 5.Atualizacao -->
+  <if variable="$(iRetMenu)" operator="equalto" value="5">
+
+    <!-- do something here... -->
+
+    <exit />
+  </if>
+</function>
+
+<!-- # Menu -->
+
+<!-- fn_menu -->
+<function name="fn_menu">
+  <stringvariable value="" variable="sKey" />
+  <integervariable value="0" variable="iRetMenu" />
+  <integervariable value="0" variable="iIndexMenu" />
+
+  <!-- build the current menu -->
+  <while variable="$(iRetMenu)" operator="equalto" value="0">
+    <callfunction name="fn_menu_page" />
+    <callfunction name="fn_menu_page_display" />
+
+    <display line="7" column="0" message="      *=Up   #=Down" />
+
+    <readkey miliseconds="60000" variablereturn="$(sKey)" />
+
+    <!-- KEY_ENTER -->
+    <if variable="$(sKey)" operator="equalto" value="KEY_ENTER">
+      <integervariable value="$(iIndexMenu)" variable="iRetMenu" />
+      <break />
+    </if>
+
+    <!-- KEY_EXTRA10 -->
+    <if variable="$(sKey)" operator="equalto" value="KEY_EXTRA10">
+      <integeroperator operator="--" variablesource="$(iIndexMenu)" />
+    </if>
+
+    <!-- KEY_EXTRA11 -->
+    <if variable="$(sKey)" operator="equalto" value="KEY_EXTRA11">
+      <integeroperator operator="++" variablesource="$(iIndexMenu)" />
+    </if>
+
+    <!-- KEY_CLEAR -->
+    <if variable="$(sKey)" operator="equalto" value="KEY_CLEAR">
+      <integervariable value="0" variable="iRetMenu" />
+      <break />
+    </if>
+
+    <!-- KEY_CANCEL -->
+    <if variable="$(sKey)" operator="equalto" value="KEY_CANCEL">
+      <integervariable value="0" variable="iRetMenu" />
+      <break />
+    </if>
+
+    <!-- Invalid Return -->
+    <if variable="$(sKey)" operator="equalto" value="-2">
+      <integervariable value="0" variable="iRetMenu" />
+      <break />
+    </if>
+  </while>
+</function>
+
+<!-- fn_menu_page -->
+<function name="fn_menu_page">
+  <stringvariable value="" variable="sMenuPage" />
+  <stringvariable value="" variable="sItemTemp" />
+  <integervariable value="0" variable="iI" />
+  <integervariable value="1" variable="iItemCount" />
+  <integervariable value="0" variable="iCurrentItemIndex" />
+  <integervariable value="0" variable="iItems" />
+
+  <!-- set items and pages -->
+  <string.elements string="$(sMenu)" delimiter="|" variablereturn="$(iItems)" />
+
+  <!-- check and validate the index menu -->
+  <if variable="$(iIndexMenu)" operator="lessthanorequalto" value="0">
+    <integervariable value="1" variable="iIndexMenu" />
+  </if>
+
+  <if variable="$(iIndexMenu)" operator="greaterthan" value="$(iItems)">
+    <integervariable value="$(iItems)" variable="iIndexMenu" />
+  </if>
+
+  <while variable="$(iI)" operator="lessthan" value="$(iItems)">
+    <stringvariable value="" variable="sItemTemp" />
+
+    <!-- Check and read item description -->
+    <string.elementat string="$(sMenu)" element_index="$(iI)" delimiter="|" variablereturn="$(sItemTemp)" />
+
+    <integervariable value="0" variable="iCurrentItemIndex" />
+    <mathematicaloperation variabledestination="$(iCurrentItemIndex)" operator="+" firstvalue="$(iI)" secondvalue="1" />
+
+    <!-- Check the item cursor -->
+    <if variable="$(iIndexMenu)" operator="equalto" value="$(iCurrentItemIndex)">
+      <if variable="$(sMenuPage)" operator="equalto" value="">
+        <integervariable value="0" variable="iLen" />
+        <string.length value="$(sItemTemp)" variablereturn="$(iLen)" />
+
+        <if variable="$(iLen)" operator="greaterthan" value="19">
+          <string.substring string="$(sItemTemp)" start="0" length="19" variablereturn="$(sItemTemp)" />
+        </if>
+
+        <stringvariable value="$(sItemTemp)" variable="sMenuPage" />
+        <joinstring firstvalue="$(sMenuPage)" secondvalue='&lt;&lt;' variabledestination="$(sMenuPage)" />
+      <else />
+        <integervariable value="0" variable="iLen" />
+        <string.length value="$(sItemTemp)" variablereturn="$(iLen)" />
+
+        <if variable="$(iLen)" operator="greaterthan" value="19">
+          <string.substring string="$(sItemTemp)" start="0" length="19" variablereturn="$(sItemTemp)" />
+        </if>
+
+        <joinstring firstvalue="$(sMenuPage)" secondvalue="|"            variabledestination="$(sMenuPage)" />
+        <joinstring firstvalue="$(sMenuPage)" secondvalue="$(sItemTemp)" variabledestination="$(sMenuPage)" />
+        <joinstring firstvalue="$(sMenuPage)" secondvalue='&lt;&lt;'     variabledestination="$(sMenuPage)" />
+      </if>
+    <else />
+      <if variable="$(sMenuPage)" operator="equalto" value="">
+        <stringvariable value="$(sItemTemp)" variable="sMenuPage" />
+      <else />
+        <joinstring firstvalue="$(sMenuPage)" secondvalue="|"            variabledestination="$(sMenuPage)" />
+        <joinstring firstvalue="$(sMenuPage)" secondvalue="$(sItemTemp)" variabledestination="$(sMenuPage)" />
+      </if>
+    </if>
+
+    <!-- Check if we are in the correct page and exit -->
+    <if variable="$(iItemCount)" operator="equalto" value="4">
+      <if variable="$(iIndexMenu)" operator="lessthanorequalto" value="$(iCurrentItemIndex)">
+        <break />
+      <else />
+        <stringvariable value="" variable="sMenuPage" />
+        <integervariable value="1" variable="iItemCount" />
+      </if>
+    <else />
+      <integeroperator operator="++" variablesource="$(iItemCount)" />
+    </if>
+
+    <integeroperator operator="++" variablesource="$(iI)" />
+  </while>
+</function>
+
+<!-- fn_menu_page_display -->
+<function name="fn_menu_page_display">
+  <integervariable value="0" variable="iItems" />
+  <integervariable value="0" variable="iI" />
+  <integervariable value="0" variable="iLine" />
+  <stringvariable value="" variable="sRet" />
+
+  <cleandisplay />
+
+  <if variable="$(sMenuPage)" operator="notequalto" value="">
+    <string.elements string="$(sMenuPage)" delimiter="|" variablereturn="$(iItems)" />
+
+    <while variable="$(iI)" operator="lessthan" value="$(iItems)">
+      <string.elementat string="$(sMenuPage)" element_index="$(iI)" delimiter="|" variablereturn="$(sRet)" />
+
+      <display line="$(iLine)" column="0" message="$(sRet)" />
+      <mathematicaloperation variabledestination="$(iLine)" operator="+" firstvalue="$(iLine)" secondvalue="2" />
+
+      <integeroperator operator="++" variablesource="$(iI)" />
+    </while>
+  </if>
+
+  <display line="7" column="0" message="      *=Up   #=Down" />
+</function>

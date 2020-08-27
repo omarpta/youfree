@@ -1,0 +1,18 @@
+<integervariable value="39" variable="iNumber"/>
+<stringvariable value="" variable="sResult"/>
+
+<!-- Declare a function -->
+<function name="double_value">
+  <mathematicaloperation firstvalue="$(iNumber)" operator="*" secondvalue="2" variabledestination="$(iNumber)"/>
+</function>
+
+<!-- Call function -->
+<callfunction name="double_value"/>
+
+<!-- Convert to String -->
+<inttostring variableinteger="$(iNumber)" variablestring="$(sResult)"/>
+
+<!-- Display output -->
+<display column="0" line="0" message="$(iNumber) $(sResult)"/>
+
+<waitkey/>
